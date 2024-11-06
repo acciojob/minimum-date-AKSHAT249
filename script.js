@@ -36,5 +36,21 @@ var dates = [
   "2023/03/29",
   "2023/03/30",
 ];
+function minDate(dates){
+	let min_index = 0;
+	let min_day1 = new Date(dates[0]);
+	let day = new Date(dates[0]);
+	dates.map( (item, index) => {
+		let day = new Date(item)
+		if(day < min_day1){
+			min_day1 = day
+			min_index = index;
+
+
+		}
+
+	} )
+	return dates[min_index]
+}
 
 alert(minDate(dates));
